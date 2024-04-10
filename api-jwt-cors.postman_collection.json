@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "7aee6ea6-5d32-4741-af18-f7eaba2dbca7",
+		"name": "api-jwt-cors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30067853"
+	},
+	"item": [
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGktand0LWNvcnMiLCJzdWIiOiJhZG1pbkBleGVtcGxvLmNvbSIsImF1ZCI6ImFwaS1qd3QtY29ycyIsImV4cCI6MTcxMjU5Njk0MjIyMywibmJmIjoxNzEyNTk2NjQyMjIzLCJpYXQiOjE3MTI1OTY2NDIyMjMsImp0aSI6IjVjMzkzMTlhLWU0ZGItNDc5OS04MWIyLWUwMmM3OTA2ZjRjNSJ9.hxUxtjpP5d11AAB1fvydp5GphNxQHvO77Djq2VWjzHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "login",
+							"value": "admin@exemplo.com",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "senhaAdmin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3010/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

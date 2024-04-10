@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+  <h2>Login</h2>
+  <div class="login-container">
+      <label for="uname"><b>E-mail: </b></label>
+      <input type="text" placeholder="admin@exemplo.com" id="uname" autocomplete="off">
+      <p>
+      <label for="psw"><b>Senha: </b></label>
+      <input type="password" placeholder="senhaAdmin" id="psw" autocomplete="off">
+  </div>
+  <div>
+    <button type="submit" onclick="makeRequestLogin()">Login</button>
+
+    <button type="button" onclick="makeRequestLogado()">Logado</button>
+
+    <button type="button" onclick="makeRequestLogout()">Logout</button>
+  </div>
+  <div id="response"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
